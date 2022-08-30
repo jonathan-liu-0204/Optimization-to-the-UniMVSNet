@@ -1,4 +1,4 @@
-./dtu_training
-./dtu_testing
-./blendedmvs
-./tanksandtemples
+./Optimized UniMVSNet/dtu_training
+./Optimized UniMVSNet/dtu_testing
+./Optimized UniMVSNet/blendedmvs
+./Optimized UniMVSNet/tanksandtemples
