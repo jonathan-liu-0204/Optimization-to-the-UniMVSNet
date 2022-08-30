@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
-datapath="<your dtu_training path>"
+# datapath="<your dtu_training path>"
+datapath="./dtu_training"
 
-log_dir="<your log save path>"
+log_dir="./log"
+
 if [ ! -d $log_dir ]; then
     mkdir -p $log_dir
 fi
 
-CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 --master_port=2340 main.py \
+CUDA_VISIBLE_DEVICES=0,1 python main.py \
         --sync_bn \
         --ndepths 48 32 8 \
         --interval_ratio 4 2 1 \
@@ -16,7 +18,7 @@ CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 -
         --log_dir $log_dir \
         --datapath $datapath \
         --dataset_name "dtu_yao" \
-        --epochs 16 \
+        --epochs 10 \
         --batch_size 2 \
         --lr 0.001 \
         --warmup 0.2 \
