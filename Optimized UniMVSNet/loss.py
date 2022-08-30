@@ -64,7 +64,7 @@ def unified_focal_loss(prob_volume, depth_values, interval, depth_gt, mask, weig
     gt_index_volume = ((depth_values <= depth_gt_volume) * ((depth_values + interval) > depth_gt_volume))
 
     gt_unity_index_volume = torch.zeros_like(prob_volume, requires_grad=False)
-    gt_unity_index_volume[gt_index_volume] = 1.0 - (depth_gt_volume[gt_index_volume] - depth_values[gt_index_volume]) / interval
+    gt_unity_index_volume[gt_index_volume] = 1.0 - (((depth_gt_volume[gt_index_volume] - depth_values[gt_index_volume]) / interval) / 2)
 
     gt_unity, _ = torch.max(gt_unity_index_volume, dim=1, keepdim=True)
     gt_unity = torch.where(gt_unity > 0.0, gt_unity, torch.ones_like(gt_unity))  # (b, 1, h, w)
