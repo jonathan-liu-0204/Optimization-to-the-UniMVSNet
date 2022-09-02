@@ -18,7 +18,7 @@ CUDA_VISIBLE_DEVICES=0,1 python main.py \
         --log_dir $log_dir \
         --datapath $datapath \
         --dataset_name "dtu_yao" \
-        --epochs 5 \
+        --epochs 6 \
         --batch_size 2 \
         --lr 0.001 \
         --warmup 0.2 \
