@@ -1,5 +1,4 @@
 # DL-Project
 
-Final Project of the Deep Learning course taken in 2022 Summer in NYCU.
+![](https://i.imgur.com/wSGEVIP.png)
 
-(Insert the final poster of this project here when done)

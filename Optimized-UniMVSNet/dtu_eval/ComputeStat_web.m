@@ -7,8 +7,8 @@ clc
 % for all included scans (UsedSets)
 
 % modify the path to evaluate your models
-dataPath='<your DTU ground-truth point path>';
-resultsPath='<your results save path>';
+dataPath='../';
+resultsPath='../log';
 
 MaxDist=20; %outlier thresshold of 20 mm
 
@@ -25,7 +25,9 @@ switch representation_string
 end
 
 % get sets used in evaluation
-UsedSets=[1 4 9 10 11 12 13 15 23 24 29 32 33 34 48 49 62 75 77 110 114 118];
+% UsedSets=[1 4 9 10 11 12 13 15 23 24 29 32 33 34 48 49 62 75 77 110 114 118];
+UsedSets=[12 13 15 23 24 29 32 33 34 48 49 62];
+
 
 nStat=length(UsedSets);
 

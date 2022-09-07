@@ -5,9 +5,9 @@ clc
 
 % script to calculate distances have been measured for all included scans (UsedSets)
 
-dataPath='<your DTU ground-truth point path>';
-plyPath='<your dtu_points path>';
-resultsPath='<your results save path>';
+dataPath='../';
+plyPath='../change_unified_reg';
+resultsPath='../log';
 
 method_string='mvsnet';
 light_string='l3'; % l3 is the setting with all lights on, l7 is randomly sampled between the 7 settings (index 0-6)
@@ -20,7 +20,8 @@ switch representation_string
 end
 
 % get sets used in evaluation
-UsedSets=[1, 4, 9, 10, 11, 12, 13, 15, 23, 24, 29, 32, 33, 34, 48, 49, 62, 75, 77, 110, 114, 118];
+% UsedSets=[1, 4, 9, 10, 11, 12, 13, 15, 23, 24, 29, 32, 33, 34, 48, 49, 62, 75, 77, 110, 114, 118];
+UsedSets=[12, 13, 15, 23, 24, 29, 32, 33, 34, 48, 49, 62];
 % UsedSets=[11, 12, 13, 15, 23, 24, 29, 32, 33, 34, 48, 49, 62, 75, 77, 110, 114, 118];
 
 dst=0.2;    %Min dist between points when reducing
