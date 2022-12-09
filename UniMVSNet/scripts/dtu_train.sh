@@ -2,6 +2,7 @@
 datapath="./dtu_training"
 
 log_dir="./log"
+
 if [ ! -d $log_dir ]; then
     mkdir -p $log_dir
 fi
