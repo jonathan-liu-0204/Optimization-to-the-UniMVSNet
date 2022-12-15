@@ -8,7 +8,7 @@ if [ ! -d $log_dir ]; then
     mkdir -p $log_dir
 fi
 
-CUDA_VISIBLE_DEVICES=0,1 python main.py \
+python3 main.py \
         --sync_bn \
         --ndepths 48 32 8 \
         --interval_ratio 4 2 1 \
