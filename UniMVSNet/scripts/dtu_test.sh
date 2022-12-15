@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-datapath="<your dtu_testing path>"
-outdir="<your output save path>"
-resume="<your model path>"
-fusibile_exe_path="<your fusibile path>/fusibile"
+datapath="./dtu_testing"
+outdir="./output"
+resume="./log/model_000005.ckpt"
+fusibile_exe_path="../fusibile"
 
-CUDA_VISIBLE_DEVICES=0 python main.py \
+python3 main.py \
         --test \
         --ndepths 48 32 8 \
         --interval_ratio 4 2 1 \

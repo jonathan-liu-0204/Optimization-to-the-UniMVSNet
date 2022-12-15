@@ -7,18 +7,18 @@ if [ ! -d $log_dir ]; then
     mkdir -p $log_dir
 fi
 
-CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 --master_port=2340 main.py \
+python3 main.py \
         --sync_bn \
         --ndepths 48 32 8 \
         --interval_ratio 4 2 1 \
         --img_size 512 640 \
-        --num_view 5 \
+        --num_view 3 \
         --dlossw 0.5 1.0 2.0 \
         --log_dir $log_dir \
         --datapath $datapath \
         --dataset_name "dtu_yao" \
         --epochs 6 \
-        --batch_size 2 \
+        --batch_size 1 \
         --lr 0.001 \
         --warmup 0.2 \
         --scheduler "steplr" \
