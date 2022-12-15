@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-datapath="<your dtu_testing path>"
-outdir="<your output save path>"
+datapath="./dtu_testing"
+outdir="./output"
 resume="<your model path>"
-fusibile_exe_path="<your fusibile path>/fusibile"
+fusibile_exe_path="../fusibile"
 
 CUDA_VISIBLE_DEVICES=0 python main.py \
         --test \

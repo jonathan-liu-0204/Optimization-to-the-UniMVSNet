@@ -2,7 +2,7 @@
 datapath="./dtu_testing"
 outdir="./output"
 resume="./log/model_000005.ckpt"
-fusibile_exe_path="../fusibile"
+fusibile_exe_path="../fusibile/fusibile"
 
 python3 main.py \
         --test \
