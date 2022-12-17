@@ -13,3 +13,8 @@
 /UniMVSNet/log
 /UniMVSNet/output
 /UniMVSNet/dtu_points
+
+/Matlab_Evaluation/dtu_points
+/Matlab_Evaluation/dtu_testing
+/Matlab_Evaluation/ObsMask
+/Matlab_Evaluation/Points
