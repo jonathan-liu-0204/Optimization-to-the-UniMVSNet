@@ -470,7 +470,7 @@ def unity_regression(prob_volume, depth_values, interval):
     val, idx = torch.max(prob_volume, dim=1, keepdim=True)
 
     wta_depth = torch.gather(depth_values, 1, idx)
-    offset = (1 - val) * interval
+    offset = (1 - val) * interval * 2
 
     depth = wta_depth + offset
     depth = depth.squeeze(1)
