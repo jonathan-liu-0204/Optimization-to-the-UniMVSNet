@@ -2,7 +2,7 @@
 # datapath="<your dtu_training path>"
 datapath="./dtu_training"
 
-log_dir="./Optimized_Baseline_log"
+log_dir="./Optimized_Baseline_Without_Sigmoid_log"
 
 if [ ! -d $log_dir ]; then
     mkdir -p $log_dir

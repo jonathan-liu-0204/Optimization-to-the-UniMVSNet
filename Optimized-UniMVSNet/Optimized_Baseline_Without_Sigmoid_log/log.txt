@@ -1,0 +1,12 @@
+Not using distributed mode
+netphs: [48, 32, 8]
+depth_intervals_ratio: [4.0, 2.0, 1.0]
+cr_base_chs: [8, 8, 8]
+fea_mode: fpn
+agg_mode: adaptive
+depth_mode: unification
+mvsdataset kwargs {}
+dataset train metas: 27097
+mvsdataset kwargs {}
+dataset test metas: 7546
+Namespace(agg_mode='adaptive', batch_size=1, blendedmvs_finetune=False, conf=[0.1, 0.15, 0.9], datapath='./dtu_training', dataset_name='dtu_yao', depth_img_save_dir='./', depth_mode='unification', depth_path=None, disp_threshold=0.25, display=False, dist_base=0.25, dist_url='env://', distributed=False, dlossw=[0.5, 1.0, 2.0], epochs=6, eval_freq=1, fea_mode='fpn', filter_method='gipuma', fix_res=False, fusibile_exe_path='../fusibile/fusibile', img_size=[512, 640], interval_ratio=[4.0, 2.0, 1.0], interval_scale=1.06, inverse_depth=False, local_rank=0, log_dir='./Optimized_Baseline_Without_Sigmoid_log', lr=0.001, lr_decay=0.5, max_h=864, max_w=1152, milestones=[10.0, 12.0, 14.0], ndepths=[48, 32, 8], no_cuda=False, num_consistent=3.0, num_view=3, num_worker=4, numdepth=192, nviews=3, outdir='./outputs', prob_threshold=0.3, rel_diff_base=0.0007692307692307692, resume=None, save_freq=20, scheduler='steplr', start_epoch=0, summary_freq=50, sync_bn=True, test=False, testlist='datasets/lists/dtu/test.txt', testpath_single_scene=None, thres_view=5, trainlist='datasets/lists/dtu/train.txt', val=False, vis=False, warmup=0.2, wd=0.0)

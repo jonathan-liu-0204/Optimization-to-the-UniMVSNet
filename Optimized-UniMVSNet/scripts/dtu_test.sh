@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 datapath="./dtu_testing"
-outdir="./Optimized_Baseline_output"
-resume="./Optimized_Baseline_log/model_000005.ckpt"
+outdir="./Optimized_Baseline_Without_Sigmoid_output"
+resume="./Optimized_Baseline_Without_Sigmoid_log/model_000005.ckpt"
 fusibile_exe_path="../fusibile/fusibile"
 
 python3 main.py \
