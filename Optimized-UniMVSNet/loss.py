@@ -68,8 +68,16 @@ def unified_focal_loss(prob_volume, depth_values, interval, depth_gt, mask, weig
 
     gt_unity, _ = torch.max(gt_unity_index_volume, dim=1, keepdim=True)
     gt_unity = torch.where(gt_unity > 0.0, gt_unity, torch.ones_like(gt_unity))  # (b, 1, h, w)
-    pos_weight = (sigmoid((gt_unity - prob_volume).abs() / gt_unity, base=5) - 0.5) * 4 + 1  # [1, 3]
-    neg_weight = (sigmoid(prob_volume / gt_unity, base=5) - 0.5) * 2  # [0, 1]
+
+    # pos_weight = (sigmoid((gt_unity - prob_volume).abs() / gt_unity, base=5) - 0.5) * 4 + 1  # [1, 3]
+    # neg_weight = (sigmoid(prob_volume / gt_unity, base=5) - 0.5) * 2  # [0, 1]
+
+    # pos_weight = (gt_unity - prob_volume).abs() / gt_unity
+    # neg_weight = prob_volume / gt_unity  # [0, 1]
+
+    pos_weight = ((gt_unity - prob_volume).abs() / gt_unity) + 1
+    neg_weight = (prob_volume / gt_unity) / 2  # [0, 1]
+
     focal_weight = pos_weight.pow(gamma) * (gt_unity_index_volume > 0.0).float() + alpha * neg_weight.pow(gamma) * (
             gt_unity_index_volume <= 0.0).float()
 

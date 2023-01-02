@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 datapath="./dtu_testing"
-outdir="./output"
-resume="./log/model_000005.ckpt"
+outdir="./opti_leaky_relu_output"
+resume="model_000005.ckpt"
 fusibile_exe_path="../fusibile/fusibile"
 
 python3 main.py \

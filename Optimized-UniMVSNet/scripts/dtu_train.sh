@@ -2,7 +2,8 @@
 # datapath="<your dtu_training path>"
 datapath="./dtu_training"
 
-log_dir="./log"
+log_dir="./Optimized_Baseline_Without_Sigmoid_in_Range_[1,3]_log"
+# resume="./Optimized_Baseline_Without_Sigmoid_in_Range_[1,3]_log/model_00000.ckpt"
 
 if [ ! -d $log_dir ]; then
     mkdir -p $log_dir
@@ -17,6 +18,7 @@ python3 main.py \
         --dlossw 0.5 1.0 2.0 \
         --log_dir $log_dir \
         --datapath $datapath \
+        --resume $resume \
         --dataset_name "dtu_yao" \
         --epochs 6 \
         --batch_size 1 \
