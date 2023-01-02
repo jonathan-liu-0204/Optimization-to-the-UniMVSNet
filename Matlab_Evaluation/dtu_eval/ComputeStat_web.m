@@ -8,7 +8,7 @@ clc
 
 % modify the path to evaluate your models
 dataPath='../';
-resultsPath='../testing/';
+resultsPath='../Matlab/';
 
 MaxDist=20; %outlier thresshold of 20 mm
 

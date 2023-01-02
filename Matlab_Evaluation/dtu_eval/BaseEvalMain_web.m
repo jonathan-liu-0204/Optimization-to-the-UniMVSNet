@@ -5,9 +5,10 @@ clc
 
 % script to calculate distances have been measured for all included scans (UsedSets)
 
+
 dataPath='../';
 plyPath='../dtu_points';
-resultsPath='../testing/';
+resultsPath='../Matlab/';
 
 method_string='mvsnet';
 light_string='l3'; % l3 is the setting with all lights on, l7 is randomly sampled between the 7 settings (index 0-6)
